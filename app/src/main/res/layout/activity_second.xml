@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <TextView
+        android:id="@+id/resultCalculateTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Ваш индекс массы тела"
+        android:paddingTop="36dp"
+        android:textSize="26sp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/descriptionTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="248dp"
+        android:hint="Описание"
+        android:textSize="24sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/linerLayout"
+        app:layout_constraintTop_toBottomOf="@+id/resultCalculateTV"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <LinearLayout
+        android:id="@+id/linerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTV">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="160dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="70dp"
+            app:srcCompat="@drawable/p1"/>
+        <TextView
+            android:id="@+id/recomendationTV"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:hint="Рекомендации"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionTV" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
